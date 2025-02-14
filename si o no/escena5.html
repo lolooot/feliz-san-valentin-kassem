@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dibujo</title>
+    <link rel="stylesheet" href="escena5.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        canvas {
+            border: 1px solid #000;
+            margin-top: 20px;
+        }
+
+        #timer {
+            font-size: 2rem;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Como sé que sos un gran artista acá te dejo un lienzo para que dejes fluir tu talento.</h1>
+    <div>
+        <label for="colorPicker">Selecciona el color del pincel: </label>
+        <input type="color" id="colorPicker" value="#000000">
+    </div>
+    <div>
+        <button id="eraserButton">Goma de borrar</button>
+        <button id="startDrawingButton">Comenzar a dibujar</button>
+    </div>
+    <div id="timer">30</div>
+    <canvas id="canvas" width="500" height="500"></canvas>
+
+    <script src="escena5.js"></script>
+</body>
+</html>

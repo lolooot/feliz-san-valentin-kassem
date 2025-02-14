@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escena 2</title>
+    <link rel="stylesheet" href="escena2.css">
+</head>
+<body>
+    <h2>Qué loco que todo empezó por un corazón blanco. Hacé clic en el corazón 140 veces.</h2>
+    <button id="heartButton" onclick="countClicks()">🤍</button>
+    <p>Hiciste <span id="clickCount">0</span> clics.</p>
+    
+    <script>
+        let clickCount = 0;
+        function countClicks() {
+            clickCount++;
+            document.getElementById('clickCount').textContent = clickCount;
+
+            if (clickCount >= 140) {
+                window.location.href = "escena3.html"; // Redirige a escena 3
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escena 3</title>
+    <link rel="stylesheet" href="escena3.css">
+</head>
+<body>
+    <h2>Entrenemos un poco más esos dedos. Apretá el corazón 100 veces en 30 segundos.</h2>
+    <button id="heartButton3" onclick="countClicks3()">🤍</button>
+    <p>Has hecho <span id="clickCount3">0</span> clics.</p>
+    <p id="timer3">Tiempo restante: 30s</p>
+
+    <script>
+        let clickCount3 = 0;
+        let timeLeft = 30;
+        let timer = setInterval(() => {
+            timeLeft--;
+            document.getElementById('timer3').textContent = `Tiempo restante: ${timeLeft}s`;
+            if (timeLeft <= 0) {
+                clearInterval(timer);
+                if (clickCount3 >= 100) {
+                    window.location.href = "escena4.html"; // Redirige a escena 4
+                } else {
+                    alert('Que nub, no pusiste pared.');
+                    location.reload();
+                }
+            }
+        }, 1000);
+
+        function countClicks3() {
+            clickCount3++;
+            document.getElementById('clickCount3').textContent = clickCount3;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escena 1</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h2>Escribí el nombre de mi persona favorita:</h2>
+    <input type="text" id="inputCode" placeholder="Acá bebeto...">
+    <button onclick="checkCode()">Enviar</button>
+
+    <script>
+        function checkCode() {
+            let inputCode = document.getElementById('inputCode').value;
+            if (inputCode === 'Kassem') {
+                window.location.href = "escena2.html"; // Redirige a escena 2
+            } else {
+                alert('No te hagas el boludo');
+            }
+        }
+    </script>
+</body>
+</html>

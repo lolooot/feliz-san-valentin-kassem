@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escena 4</title>
+    <link rel="stylesheet" href="escena4.css">
+</head>
+<body>
+    <h2>Ah, ¿te hacés el capo? Ahora apretá 200 veces el corazón en solo 10 segundos.</h2>
+    <button id="heartButton4" onclick="countClicks4()">🤍</button>
+    <p>Has hecho <span id="clickCount4">0</span> clics.</p>
+    <p id="timer4">Tiempo restante: 10s</p>
+
+    <script>
+        let clickCount4 = 0;
+        let timeLeft4 = 10;
+        let timer4 = setInterval(() => {
+            timeLeft4--;
+            document.getElementById('timer4').textContent = `Tiempo restante: ${timeLeft4}s`;
+            if (timeLeft4 <= 0) {
+                clearInterval(timer4);
+                alert("Bueno, no lo lograste. Pero te amo enormemente, mi chiquito precioso.");
+                window.location.href = "escena5.html"; // Redirige a escena 5
+            }
+        }, 1000);
+
+        function countClicks4() {
+            clickCount4++;
+            document.getElementById('clickCount4').textContent = clickCount4;
+        }
+    </script>
+</body>
+</html>

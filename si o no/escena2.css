@@ -1,0 +1,50 @@
+/* Establecer el fondo de la página y centrar el contenido */
+body {
+    background-color: #ffa4ca; /* Color de fondo claro */
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Estilo para el título (h2) */
+h2 {
+    text-align: center;
+    margin-bottom: 30px; /* Espacio entre el título y el botón */
+    font-size: 24px;
+    color: #333; /* Color oscuro para el texto */
+    padding: 0 20px; /* Espacio alrededor del título */
+}
+
+/* Estilo para el botón */
+button {
+    font-size: 40px; /* Aumentar el tamaño del botón */
+    padding: 20px 40px; /* Aumentar el tamaño del botón */
+    border-radius: 50%; /* Hacer el botón redondo */
+    background-color: #ff7bc8; /* Color de fondo del botón */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    cursor: pointer; /* Mostrar el cursor como mano */
+    transition: background-color 0.3s ease; /* Transición suave al cambiar de color */
+}
+
+/* Efecto al pasar el mouse sobre el botón */
+button:hover {
+    background-color: #e23477; /* Color al pasar el ratón */
+}
+
+/* Estilo para el contador de clics */
+p {
+    text-align: center;
+    font-size: 18px;
+    color: #333;
+}
+
+/* Estilo para el contador de clics en la pantalla */
+span {
+    font-weight: bold;
+    color: #ff4c4c; /* Color del contador de clics */
+}
